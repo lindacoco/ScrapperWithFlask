@@ -26,7 +26,7 @@ def extract_job(html):
     "title":title,
     "company":company,
     "location":location,
-    "link":f"https://stackoverflow.com/jobs/{link}"
+    "link": f"https://stackoverflow.com/jobs/{link}"
     }
 
 def extract_jobs(last_page,url):
@@ -46,7 +46,7 @@ def extract_jobs(last_page,url):
   return jobs
 
 def get_jobs(word):
-  url="https://stackoverflow.com/jobs?q={word}&sort=i"
+  url=f"https://stackoverflow.com/jobs?q={word}&sort=i"
   last_page = int(get_last_page(url))
   jobs = extract_jobs(last_page, url)
   
